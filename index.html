@@ -6,7 +6,7 @@
     
     <title>Analog Productivity | Analog Productivity</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Non-digital systems for prolific knowledge work">
+    <meta name="description" content="Non-digital systems for better knowledge work">
     <meta name="generator" content="Hugo 0.92.2" />
     
     
@@ -18,14 +18,78 @@
 
     
     
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RPJSL5KSVL"></script>
+<div id="cookie-notice">
+<span>We would like to use third party cookies and scripts to improve the 
+functionality of this website.</span>
+<a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a>
+<a id="cookie-notice-deny" class="btn btn-primary btn-sm">Deny</a>
+<a href="/privacy" class="btn btn-primary btn-sm">More info</a></div>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
 
-  gtag('config', 'G-RPJSL5KSVL');
+    if(readCookie('cookie-notice-option')=='true') {
+        
+        
+        function loadScriptAsync(scriptSrc, callback) {
+            if (typeof callback !== 'function') {
+                throw new Error('Not a valid callback for async script load');
+            }
+            var script = document.createElement('script');
+            script.onload = callback;
+            script.src = scriptSrc;
+            document.head.appendChild(script);
+        }
+
+        
+
+        
+
+        
+        loadScriptAsync('https://www.googletagmanager.com/gtag/js?id=G-RPJSL5KSVL', function () {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-RPJSL5KSVL'); 
+        })
+
+        
+    } else if (readCookie('cookie-notice-option')!='false'){
+        document.getElementById('cookie-notice').style.display = 'block';
+    }
+
+    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+        createCookie('cookie-notice-option','true',365);
+        document.getElementById('cookie-notice').style.display = 'none';
+        location.reload();
+    });
+
+    document.getElementById('cookie-notice-deny').addEventListener("click",function() {
+        createCookie('cookie-notice-option','false',365);
+        document.getElementById('cookie-notice').style.display = 'none';
+        location.reload();
+    });
+
 </script>
 
     
@@ -56,14 +120,14 @@
     
 
     <meta property="og:title" content="Analog Productivity" />
-<meta property="og:description" content="Non-digital systems for prolific knowledge work" />
+<meta property="og:description" content="Non-digital systems for better knowledge work" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://analogproductivity.com/" />
 
 <meta itemprop="name" content="Analog Productivity">
-<meta itemprop="description" content="Non-digital systems for prolific knowledge work"><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Non-digital systems for better knowledge work"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Analog Productivity"/>
-<meta name="twitter:description" content="Non-digital systems for prolific knowledge work"/>
+<meta name="twitter:description" content="Non-digital systems for better knowledge work"/>
 
 	
   </head>
@@ -80,7 +144,7 @@
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
       
         Analog Productivity
-        <h5>Non-digital systems for prolific knowledge work</h5>
+        <h5>Non-digital systems for better knowledge work</h5>
       
     </a>
     <div class="flex-l items-center">
@@ -96,7 +160,7 @@
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/posts/why" title="Why page">
+            <a class="hover-white no-underline white-90" href="/posts/whyanalogsystems" title="Why page">
               Why
             </a>
           </li>
@@ -146,9 +210,9 @@
     <main class="pb7" role="main">
       
   <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-      <p>Welcome to Analog Productivity, a site about <strong>non-digital systems</strong> that boost efficiency and productivity in knowledge work 🧠</p>
+      <p>Welcome to Analog Productivity, a site celebrating <strong>non-digital tools and systems</strong> that enable efficient, productive and sustainable knowledge work 🧠</p>
 <p>&ndash;</p>
-<p>If you&rsquo;re new here, perhaps start here.</p>
+<p>New here? Start with <a href="posts/whyanalogsystems/">why</a></p>
 
     </article>
     
